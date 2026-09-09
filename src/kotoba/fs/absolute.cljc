@@ -6,6 +6,8 @@
   definitions it reaches -- nothing else.
 "
   (:require [kotoba.lang.text :as str]
-            [kotoba.fs.sep :refer [sep]]))
+            [kotoba.fs.sep :refer [sep]])
+  #?(:clj  (:require [kotoba.lang.text :as str])
+     :cljs (:require [kotoba.lang.text :as str])))
 
 (defn absolute? [p] (str/starts-with? p sep))
